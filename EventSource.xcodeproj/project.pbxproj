@@ -22,6 +22,7 @@
 		2838335817A1C02900C0141D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2838335717A1C02900C0141D /* ViewController.m */; };
 		2838335B17A1C02900C0141D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2838335917A1C02900C0141D /* ViewController.xib */; };
 		2838335F17A1C03B00C0141D /* libEventSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2838332917A1BFFE00C0141D /* libEventSource.a */; };
+		695D16581DD34ACA00E335F2 /* EventSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2838333317A1BFFE00C0141D /* EventSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,7 @@
 		2838335617A1C02900C0141D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2838335717A1C02900C0141D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2838335A17A1C02900C0141D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		695D164F1DD34ABF00E335F2 /* libEventSource OSX.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libEventSource OSX.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		695D164C1DD34ABF00E335F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,6 +107,7 @@
 			children = (
 				2838332917A1BFFE00C0141D /* libEventSource.a */,
 				2838333E17A1C02900C0141D /* EventViewer.app */,
+				695D164F1DD34ABF00E335F2 /* libEventSource OSX.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +169,16 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		695D164D1DD34ABF00E335F2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		2838332817A1BFFD00C0141D /* EventSource */ = {
 			isa = PBXNativeTarget;
@@ -194,6 +214,23 @@
 			productReference = 2838333E17A1C02900C0141D /* EventViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		695D164E1DD34ABF00E335F2 /* EventSource OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 695D16571DD34ABF00E335F2 /* Build configuration list for PBXNativeTarget "EventSource OSX" */;
+			buildPhases = (
+				695D164B1DD34ABF00E335F2 /* Sources */,
+				695D164C1DD34ABF00E335F2 /* Frameworks */,
+				695D164D1DD34ABF00E335F2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EventSource OSX";
+			productName = "EventSource OSX";
+			productReference = 695D164F1DD34ABF00E335F2 /* libEventSource OSX.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +239,11 @@
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Neil Cowburn";
+				TargetAttributes = {
+					695D164E1DD34ABF00E335F2 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
 			};
 			buildConfigurationList = 2838332417A1BFFD00C0141D /* Build configuration list for PBXProject "EventSource" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -217,6 +259,7 @@
 			targets = (
 				2838332817A1BFFD00C0141D /* EventSource */,
 				2838333D17A1C02900C0141D /* EventViewer */,
+				695D164E1DD34ABF00E335F2 /* EventSource OSX */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +295,14 @@
 				2838334B17A1C02900C0141D /* main.m in Sources */,
 				2838334F17A1C02900C0141D /* AppDelegate.m in Sources */,
 				2838335817A1C02900C0141D /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		695D164B1DD34ABF00E335F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				695D16581DD34ACA00E335F2 /* EventSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +433,64 @@
 			};
 			name = Release;
 		};
+		695D16551DD34ABF00E335F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		695D16561DD34ABF00E335F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +520,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		695D16571DD34ABF00E335F2 /* Build configuration list for PBXNativeTarget "EventSource OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				695D16551DD34ABF00E335F2 /* Debug */,
+				695D16561DD34ABF00E335F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
